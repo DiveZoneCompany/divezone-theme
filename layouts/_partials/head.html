@@ -19,13 +19,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ default .Site.Title .Title }}</title>
-  <meta name="description" content="{{ default .Site.Params.description .Params.description }}">
-  {{ $keywords := .Site.Params.keywords }}
+  <meta name="description" content="{{ default hugo.Data.manifest.meta.description .Params.description }}">
+  {{ $keywords := hugo.Data.manifest.meta.keywords }}
   {{ if .Params.tags }}
   {{ $keywords = $keywords | append .Params.tags }}
   {{ end }}
-  <meta name="keywords" content="{{ delimit $keywords " , " }}">
-  <meta name="author" content="{{ default .Site.Params.author .Params.author }}">
+  {{ $keywords = delimit $keywords ", " "" }}
+  <meta name="keywords" content="{{ $keywords }}">
+  <meta name="author" content="{{ default hugo.Data.manifest.meta.author .Params.author }}">
   <!-- ANALYTICS -->
   {{ partial "analytics.html" . }}
 </head>

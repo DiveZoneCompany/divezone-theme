@@ -1,0 +1,10 @@
+{{ $pages := site.Menus.footer }}
+<nav class='footer--nav'>
+    <ul role='list'>
+        {{ range $pages }}
+        <li class="{{ if eq .URL $.Page.RelPermalink }}active{{ end }}">
+            <a href='{{ .URL }}'>{{ .Name }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>

@@ -1,0 +1,7 @@
+<div class="footer--socials">
+    {{ range .Site.Data.socials }}
+    <a id="social-{{ .key | urlize }}" class="{{ .icon }}" href="{{ .url }}" target="_blank">
+        <span class="sr-only">{{ .key }}</span>
+    </a>
+    {{ end }}
+</div>

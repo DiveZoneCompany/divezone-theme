@@ -1,6 +1,5 @@
 ---
-type: page
-layout: page
+type: terms
 title: Terms & Conditions
 menus:
   footer:

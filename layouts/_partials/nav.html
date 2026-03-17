@@ -20,7 +20,7 @@
 <nav class="nav--sub">
   <ul role="list">
     {{ range $children }}
-    <li class="{{ if eq $.Page.RelPermalink .URL }}active{{ end }}">
+    <li {{ if .Page.Draft -}}draft {{ end -}} class="{{ if eq $.Page.RelPermalink .URL }}active{{ end }}">
       <a href="{{ .URL | relURL }}">{{ .Name }}</a>
     </li>
     {{ end }}

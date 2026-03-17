@@ -21,12 +21,16 @@
   <title>{{ default .Site.Title .Title }}</title>
   <meta name="description" content="{{ default hugo.Data.manifest.meta.description .Params.description }}">
   {{ $keywords := hugo.Data.manifest.meta.keywords }}
-  {{ if .Params.tags }}
-  {{ $keywords = $keywords | append .Params.tags }}
+  {{ range .Keywords }}
+  {{ $keywords = $keywords | append . }}
   {{ end }}
-  {{ $keywords = delimit $keywords ", " "" }}
-  <meta name="keywords" content="{{ $keywords }}">
+  {{ range .Params.tags }}
+  {{ $keywords = $keywords | append . }}
+  {{ end }}
+  <meta name="keywords" content="{{ delimit $keywords ", " }}">
   <meta name="author" content="{{ default hugo.Data.manifest.meta.author .Params.author }}">
+  {{ partial "schema.html" . }}
+  {{ partial "opengraph.html" . }}
   <!-- ANALYTICS -->
   {{ partial "analytics.html" . }}
 </head>

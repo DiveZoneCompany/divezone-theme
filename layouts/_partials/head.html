@@ -19,8 +19,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ default .Site.Title .Title }}</title>
-  <meta name="description" content="{{ default hugo.Data.manifest.meta.description .Params.description }}">
-  {{ $keywords := hugo.Data.manifest.meta.keywords }}
+  <meta name="description" content="{{ default hugo.Data.settings.meta.description .Params.description }}">
+  {{ $keywords := hugo.Data.settings.meta.keywords }}
   {{ range .Keywords }}
   {{ $keywords = $keywords | append . }}
   {{ end }}
@@ -28,7 +28,7 @@
   {{ $keywords = $keywords | append . }}
   {{ end }}
   <meta name="keywords" content="{{ delimit $keywords ", " }}">
-  <meta name="author" content="{{ default hugo.Data.manifest.meta.author .Params.author }}">
+  <meta name="author" content="{{ default hugo.Data.settings.meta.author .Params.author }}">
   {{ partial "schema.html" . }}
   {{ partial "opengraph.html" . }}
   <!-- ANALYTICS -->

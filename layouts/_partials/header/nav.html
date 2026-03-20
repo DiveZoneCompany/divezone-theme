@@ -1,8 +1,7 @@
-{{ $pages := site.Menus.main }}
 {{ $children := false }}
 <nav class="nav--main">
   <ul role="list">
-    {{ range $pages }}
+    {{ range site.Menus.main }}
     <li {{ with .Page }}{{ if .Draft -}}draft {{ end -}}{{ end -}} class="{{ if $.Page.HasMenuCurrent " main" . }}active{{ end }}{{ if
       $.Page.IsMenuCurrent "main" . }} active{{ end }}">
       <a href="{{ .URL }}">{{ .Name }}</a>

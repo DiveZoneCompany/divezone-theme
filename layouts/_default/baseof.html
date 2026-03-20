@@ -4,7 +4,7 @@
   <body>
     <div class="page-layout">
       {{ partial "header.html" . }}
-      {{ partial "nav.html" . }}
+      {{ partial "header/nav.html" . }}
       <main {{ if .Draft }}draft{{ end }}
         class="main--{{ .Type }} {{ with .File }} main--{{ .ContentBaseName | default "home" }}{{ end }}">
         {{ block "main" . }}{{ end }}

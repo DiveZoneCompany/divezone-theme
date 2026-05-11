@@ -1,0 +1,31 @@
+@use "../abstracts/fonts" as *;
+
+body {
+  font-family: var(--font-dosis);
+  font-size: var(--fs-300);
+  font-weight: 300;
+}
+
+h1 {
+  font-size: var(--fs-500);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--fs-400);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--fs-400);
+  font-weight: 400;
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+footer {
+  font-weight: 200;
+}

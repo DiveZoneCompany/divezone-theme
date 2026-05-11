@@ -1,0 +1,54 @@
+@use "../abstracts" as *;
+@use "sass:map";
+
+:root {
+  --section-spacing: 3.5rem;
+
+  @include mq(medium) {
+    --section-spacing: 7rem;
+  }
+
+  @each $screen-size, $property in $type-scale {
+    @if $screen-size ==small {
+      @each $prop, $value in $property {
+        & {
+          --fs-#{$prop}: #{$value};
+        }
+      }
+    }
+
+    @else {
+      @include mq(small) {
+        @each $prop, $value in $property {
+          & {
+            --fs-#{$prop}: #{$value};
+          }
+        }
+      }
+    }
+  }
+
+  @each $key, $value in $spacing {
+    .m-#{$key} {
+      margin: $value;
+    }
+
+    .p-#{$key} {
+      padding: $value;
+    }
+  }
+
+  @each $color, $theme in $themes {
+    @each $prop, $value in $theme {
+      & {
+        --theme-#{""+$color}-#{$prop}: #{$value};
+      }
+    }
+  }
+
+  @each $prop, $value in map.get($themes, blue) {
+    & {
+      --theme-#{$prop}: #{$value};
+    }
+  }
+}

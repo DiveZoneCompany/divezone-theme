@@ -1,0 +1,37 @@
+$themes: (
+  red: (
+    primary: darkred,
+    secondary: orangered,
+    warning: mistyrose,
+    background-primary: white,
+    background-secondary: mistyrose,
+  ),
+  blue: (
+    primary: darkblue,
+    secondary: blue,
+    warning: lightcyan,
+    background-primary: white,
+    background-secondary: lightcyan,
+  ),
+  darkblue: (
+    primary: dodgerblue,
+    secondary: blue,
+    warning: turquoise,
+    background-primary: #000010,
+    background-secondary: lightseagreen,
+  ),
+  green: (
+    primary: darkgreen,
+    secondary: olivedrab,
+    warning: lightyellow,
+    background-primary: white,
+    background-secondary: lightyellow,
+  ),
+  darkgreen: (
+    primary: olivedrab,
+    secondary: darkgreen,
+    warning: greenyellow,
+    background-primary: #001000,
+    background-secondary: yellowgreen,
+  ),
+);

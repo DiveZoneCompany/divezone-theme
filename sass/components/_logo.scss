@@ -1,0 +1,146 @@
+.logo {
+  font-family: "Nunito", sans-serif;
+  display: grid;
+  grid-template:
+    "preTitle ."
+    "titlePart1 titlePart2"
+    ". postTitle"
+    "slogan slogan";
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+  &:has(.logo) {
+    text-decoration: none;
+  }
+}
+
+.logo--pretitle {
+  grid-area: "preTitle";
+  padding-left: 0.4em;
+  text-align: left;
+}
+
+.logo--posttitle {
+  padding: 0 0.2em;
+  grid-area: "postTitle";
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo--pretitle,
+.logo--posttitle {
+  font-size: 16px;
+  line-height: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.logo--titlePart1 {
+  grid-area: "titlePart1";
+  font-weight: 700;
+}
+
+.logo--titlePart2 {
+  grid-area: "titlePart2";
+  font-weight: 300;
+}
+
+.logo--titlePart1,
+.logo--titlePart2 {
+  font-size: 72px;
+  line-height: 58px;
+  height: 59px;
+}
+
+.logo--slogan {
+  grid-area: "slogan";
+  grid-column: 1 / span 2;
+  margin-top: 4px;
+  padding-top: 4px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.logo--theme {
+  .logo--pretitle,
+  .logo--posttitle {
+    color: var(--theme-primary);
+  }
+
+  .logo--titlePart1 {
+    color: var(--theme-secondary);
+  }
+
+  .logo--titlePart2 {
+    color: var(--theme-primary);
+  }
+
+  .logo--slogan {
+    border-top: 1px solid var(--theme-primary);
+    color: var(--theme-primary);
+  }
+}
+
+.logo--blue {
+  .logo--pretitle,
+  .logo--posttitle {
+    color: var(--theme-blue-primary);
+  }
+
+  .logo--titlePart1 {
+    color: var(--theme-blue-secondary);
+  }
+
+  .logo--titlePart2 {
+    color: var(--theme-blue-primary);
+  }
+
+  .logo--slogan {
+    border-top: 1px solid var(--theme-blue-primary);
+    color: var(--theme-blue-primary);
+  }
+}
+
+.logo--green {
+  .logo--pretitle,
+  .logo--posttitle {
+    color: var(--theme-green-primary);
+  }
+
+  .logo--titlePart1 {
+    color: var(--theme-green-secondary);
+  }
+
+  .logo--titlePart2 {
+    color: var(--theme-green-primary);
+  }
+
+  .logo--slogan {
+    border-top: 1px solid var(--theme-green-primary);
+    color: var(--theme-green-primary);
+  }
+}
+
+.logo--red {
+  .logo--pretitle,
+  .logo--posttitle {
+    color: var(--theme-red-primary);
+  }
+
+  .logo--titlePart1 {
+    color: var(--theme-red-secondary);
+  }
+
+  .logo--titlePart2 {
+    color: var(--theme-red-primary);
+  }
+
+  .logo--slogan {
+    border-top: 1px solid var(--theme-red-primary);
+    color: var(--theme-red-primary);
+  }
+}

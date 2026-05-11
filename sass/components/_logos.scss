@@ -1,0 +1,56 @@
+.logo--divezone-part1 {
+    font-family: 'Nunito', sans-serif; 
+    font-weight: 800; 
+    font-size: 60px; 
+    fill: var(--color-blue-secondary); ; 
+}
+.logo--divezone-part2 { 
+    font-family: 'Nunito', sans-serif; 
+    font-weight: 400; 
+    font-size: 60px; 
+    fill: var(--color-blue-primary); 
+}
+.logo--divezone-prefix, .logo--divezone-suffix { 
+    font-family: 'Nunito', sans-serif; 
+    font-weight: 400; 
+    font-size: 16px; 
+    fill: var(--color-blue-primary); 
+}
+
+.logo--devzone-part1 {
+    font-family: 'Nunito', sans-serif; 
+    font-weight: 800; 
+    font-size: 60px; 
+    fill: var(--color-green-secondary); ; 
+}
+.logo--devzone-part2 { 
+    font-family: 'Nunito', sans-serif; 
+    font-weight: 400; 
+    font-size: 60px; 
+    fill: var(--color-green-primary); 
+}
+.logo--devzone-suffix { 
+    font-family: 'Nunito', sans-serif; 
+    font-weight: 400; 
+    font-size: 16px; 
+    fill: var(--color-green-primary); 
+}
+
+.logo--devzone-number {
+    font-family: 'Nunito', sans-serif; 
+    font-weight: 800; 
+    stroke: lightgreen;
+    fill: none;
+}
+
+
+.bubble { 
+    fill: #7dd3fc; 
+    stroke: #004d99; 
+    stroke-width: 1.5; 
+    opacity: 0.8; 
+}
+.bubble-highlight { 
+    fill: white; 
+    opacity: 0.6; 
+}

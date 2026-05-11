@@ -1,0 +1,10 @@
+header {
+  margin: 1rem auto;
+  width: fit-content;
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    margin: 0.5rem auto;
+  }
+}

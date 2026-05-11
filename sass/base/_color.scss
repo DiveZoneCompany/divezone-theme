@@ -1,0 +1,15 @@
+:root {
+  --color-blue-primary: var(--theme-blue-primary);
+  --color-blue-secondary: var(--theme-blue-secondary);
+  --color-green-primary: var(--theme-green-primary);
+  --color-green-secondary: var(--theme-green-secondary);
+  --color-red-primary: var(--theme-red-primary);
+  --color-red-secondary: var(--theme-red-secondary);  
+
+  @media (prefers-color-scheme: dark) {
+    --color-blue-primary: var(--theme-darkblue-primary);
+    --color-blue-secondary: var(--theme-darkblue-secondary);
+    --color-green-primary: var(--theme-darkgreen-primary);
+    --color-green-secondary: var(--theme-darkgreen-secondary); 
+  }
+}

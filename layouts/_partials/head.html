@@ -5,10 +5,9 @@
   <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end -}}
   <!-- FAV ICON -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/{{ default "divezone"  hugo.Data.settings.theme }}/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/{{ default "divezone"  hugo.Data.settings.theme }}/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/{{ default "divezone"  hugo.Data.settings.theme }}/favicon-16x16.png">
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
   <link rel="stylesheet" href="/fontawesome/css/solid.min.css">
@@ -31,6 +30,4 @@
   <meta name="author" content="{{ default hugo.Data.settings.meta.author .Params.author }}">
   {{ partial "schema.html" . }}
   {{ partial "opengraph.html" . }}
-  <!-- ANALYTICS -->
-  {{ partial "analytics.html" . }}
 </head>
